@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.4 | MIT License | https://tailwindcss.com */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -157,6 +158,9 @@
   }
 }
 @layer utilities {
+  .hidden {
+    display: none;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
