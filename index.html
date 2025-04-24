@@ -17,14 +17,20 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- <script src="js/main.js" defer></script> -->
+    <script src="js/mobile-menu.js" defer></script>
+    <script src="js/feature.js" defer></script>
+    <script src="js/faq.js" defer></script>
+    <script src="js/form.js" defer></script>
   </head>
   <body
     id="page"
     class="font-rubik flex h-max min-h-screen w-screen flex-col bg-gray-50 text-base"
   >
     <header class="mt-4 px-7 py-4">
-      <nav class="relative flex flex-row items-center justify-between">
+      <nav
+        id="header-nav"
+        class="relative flex flex-row items-center justify-between"
+      >
         <a href="#" class="w-fit" id="logo">
           <svg
             width="148"
@@ -89,28 +95,28 @@
         <li class="w-full border-t border-t-gray-600">
           <a
             href="#features"
-            class="block w-full p-[1rem] text-center focus:text-gray-50"
+            class="nav-links block w-full p-[1rem] text-center focus:text-gray-50"
             >Features</a
           >
         </li>
         <li class="w-full border-t border-t-gray-600">
           <a
             href="#pricing"
-            class="block w-full p-[1rem] text-center focus:text-gray-50"
+            class="nav-links block w-full p-[1rem] text-center focus:text-gray-50"
             >Pricing</a
           >
         </li>
         <li class="w-full border-t border-t-gray-600">
           <a
             href="#contact"
-            class="block w-full p-[1rem] text-center focus:text-gray-50"
+            class="nav-links block w-full p-[1rem] text-center focus:text-gray-50"
             >Contact</a
           >
         </li>
         <li class="w-full border-t border-t-gray-600">
           <a
             href="#login"
-            class="mt-6 block w-full rounded-[0.35rem] px-6 py-2 text-center font-[500] text-gray-50 outline-2 outline-gray-50 focus:bg-gray-50 focus:text-gray-900"
+            class="nav-links mt-6 block w-full rounded-[0.35rem] px-6 py-2 text-center font-[500] text-gray-50 outline-2 outline-gray-50 focus:bg-gray-50 focus:text-gray-900"
             >Login</a
           >
         </li>
@@ -137,8 +143,8 @@
     </section>
 
     <main class="mt-4 px-7 py-4">
-      <section id="about" class="flex w-full flex-col">
-        <div id="about-text" class="">
+      <section id="about" class="mt-3 flex w-full flex-col">
+        <div id="about-text" class="flex w-full flex-col items-center">
           <h1
             class="mt-8 text-center text-[1.75rem] leading-9 font-[500] text-gray-800"
           >
@@ -151,8 +157,10 @@
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </p>
+
           <div
-            class="mt-6 flex w-full flex-row items-center gap-3 text-[0.74rem]"
+            id="get-button"
+            class="mt-6 flex flex-row items-center gap-3 text-[0.74rem]"
           >
             <a
               href="#chrome"
@@ -179,7 +187,7 @@
         </div>
       </section>
 
-      <section id="features" class="flex w-full flex-col">
+      <section id="features" class="mt-28 flex w-full flex-col">
         <h2 class="text-center text-[1.5rem] font-[500] text-gray-800">
           Features
         </h2>
@@ -214,20 +222,24 @@
 
         <div id="feature-info" class="mt-12 flex w-full flex-col">
           <div
-            id="feature-img"
             class="relative w-full after:absolute after:-bottom-8 after:-left-7 after:-z-1 after:h-[90%] after:w-full after:rounded-tr-full after:rounded-br-full after:bg-indigo-500"
           >
             <img
+              id="feature-img"
               src="/images/features/features-tab-1.svg"
               alt="Simple Bookmarking w-full h-auto"
             />
           </div>
 
           <div id="feature-text" class="mt-16">
-            <h3 class="text-center text-[1.3rem] font-[500] text-gray-800">
+            <h3
+              id="feature-title"
+              class="text-center text-[1.3rem] font-[500] text-gray-800"
+            >
               Bookmark in one click
             </h3>
             <p
+              id="feature-description"
               class="mt-2 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400"
             >
               Organize your bookmarks however you like. Our simple drag-and-drop
@@ -236,6 +248,7 @@
             </p>
             <div class="mt-8 hidden md:block">
               <a
+                id="feature-link"
                 href="#"
                 class="rounded-[0.35rem] bg-indigo-500 px-4 py-3 font-[500] text-white hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
                 >More Info</a
@@ -243,22 +256,9 @@
             </div>
           </div>
         </div>
-        <!-- 
-        Bookmark in one click
-        Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-        More Info
-
-        Intelligent search 
-        Our powerful search feature will help you find saved
-        sites in no time at all. No need to trawl through all of your bookmarks.
-        More Info 
-        
-        Share your bookmarks 
-        Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button. 
-        More Info -->
       </section>
 
-      <section id="download" class="flex w-full flex-col">
+      <section id="download" class="mt-28 flex w-full flex-col">
         <h2 class="text-center text-[1.38rem] font-[500] text-gray-800">
           Download the extension
         </h2>
@@ -356,7 +356,7 @@
         </div>
       </section>
 
-      <section id="faq" class="flex w-full flex-col">
+      <section id="faq" class="mt-28 flex w-full flex-col">
         <h2
           class="text-center text-[1.4rem] leading-7 font-[550] text-gray-800"
         >
@@ -392,7 +392,7 @@
               </button>
             </div>
             <p
-              class="answer mt-4 w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
+              class="answer mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
             >
               We offer a simple and powerful bookmarking feature that lets you
               save your favorite websites for easy access anytime.
@@ -475,7 +475,7 @@
               </button>
             </div>
             <p
-              class="answer mt-4 w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
+              class="answer mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
             >
               We're currently optimized for Google Chrome and Opera. We're
               actively working on bringing full support to other Chromium-based
@@ -493,7 +493,7 @@
       </section>
     </main>
 
-    <footer class="flex w-full flex-col">
+    <footer class="mt-28 flex w-full flex-col">
       <section
         id="contact"
         class="flex w-full flex-col items-center bg-indigo-500 p-7"
@@ -521,20 +521,18 @@
               type="text"
               placeholder="Enter your email address"
               id="email-input"
-              class="error w-[16.5rem] rounded-[0.4rem] bg-gray-50 px-4 py-[0.6rem] text-[0.95rem] text-gray-800 placeholder:text-[0.85rem] placeholder:font-[450] placeholder:opacity-50"
+              class="w-[16.5rem] rounded-[0.4rem] bg-gray-50 px-4 py-[0.6rem] text-[0.95rem] text-gray-800 placeholder:text-[0.85rem] placeholder:font-[450] placeholder:opacity-50"
             />
 
             <p
-              id="email-error-msg"
-              class="email-error error absolute bottom-[3%] left-[4%] hidden text-[0.7rem] font-[500] text-gray-50 italic"
+              class="email-error absolute bottom-[3%] left-[4%] hidden text-[0.7rem] font-[500] text-gray-50 italic"
             >
               Whoops, make sure it's an email
             </p>
             <img
               src="/images/icons/icon-error.svg"
               alt="Error Icon"
-              class="email-error error absolute right-[4%] bottom-[48%] hidden h-auto w-5"
-              id="email-error-img"
+              class="email-error absolute right-[4%] bottom-[48%] hidden h-auto w-5"
             />
           </div>
           <button
