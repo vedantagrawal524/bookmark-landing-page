@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
+* {
+  transition: all 0.3s linear;
+}
+
 @theme {
   --font-rubik: "Rubik", sans-serif;
   --breakpoint-xs: 580px;
@@ -32,7 +36,7 @@
 
   /* Feature */
   .feature-option.selected {
-    @apply relative text-gray-800 after:absolute after:bottom-0 after:left-[25%] after:h-[4px] after:w-[50%] after:rounded-tl-full after:rounded-tr-full after:bg-red-400;
+    @apply relative text-gray-800 opacity-90 after:absolute after:bottom-0 after:left-[25%] after:h-[4px] after:w-[50%] after:rounded-tl-full after:rounded-tr-full after:bg-red-400 after:opacity-80;
   }
 
   /* Faq */
@@ -43,7 +47,7 @@
     @apply stroke-red-400;
   }
   .answer.opened {
-    @apply inline-block!;
+    @apply inline-block! animate-[pulse_1.3s_linear_1];
   }
 
   /* Email */
