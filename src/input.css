@@ -3,6 +3,7 @@
 
 @theme {
   --font-rubik: "Rubik", sans-serif;
+  --breakpoint-xs: 580px;
 }
 
 @layer components {

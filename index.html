@@ -26,7 +26,7 @@
     id="page"
     class="font-rubik flex h-max min-h-screen w-screen flex-col bg-gray-50 text-base"
   >
-    <header class="mt-4 px-7 py-4">
+    <header class="mt-4 px-7 py-4 md:mt-8 md:px-16 md:py-6 lg:px-24">
       <nav
         id="header-nav"
         class="relative flex flex-row items-center justify-between"
@@ -64,7 +64,7 @@
         </a>
 
         <ul
-          class="mt-8 hidden w-full flex-row items-center gap-4 text-[0.8rem] font-[470] tracking-widest text-gray-500 uppercase md:flex"
+          class="xs:flex hidden flex-row gap-4 text-[0.7rem] font-[470] tracking-widest text-gray-500 uppercase"
         >
           <li><a href="#features" class="hover:text-red-400">Features</a></li>
           <li><a href="#pricing" class="hover:text-red-400">Pricing</a></li>
@@ -72,7 +72,7 @@
           <li>
             <a
               href="#login"
-              class="rounded-[0.35rem] bg-red-400 px-6 py-2 font-[500] text-gray-50 hover:bg-gray-50 hover:text-red-400 hover:outline-2 hover:outline-red-400"
+              class="rounded-[0.35rem] bg-red-400 px-6 py-2.5 font-[500] text-gray-50 hover:bg-gray-50 hover:text-red-400 hover:outline-2 hover:outline-red-400"
               >Login</a
             >
           </li>
@@ -80,7 +80,7 @@
 
         <button
           id="hamburger-button"
-          class="h-5 w-4 bg-[url(/images/icons/icon-hamburger.svg)] bg-contain bg-center bg-no-repeat md:hidden"
+          class="xs:hidden h-5 w-4 bg-[url(/images/icons/icon-hamburger.svg)] bg-contain bg-center bg-no-repeat"
         ></button>
       </nav>
     </header>
@@ -142,16 +142,20 @@
       </ul>
     </section>
 
-    <main class="mt-4 px-7 py-4">
-      <section id="about" class="mt-3 flex w-full flex-col">
-        <div id="about-text" class="flex w-full flex-col items-center">
+    <main class="mt-4 px-7 py-4 md:px-16 md:py-8 lg:px-24">
+      <section
+        id="about"
+        class="mt-3 flex w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-between"
+      >
+        <div id="about-text" class="mx-auto flex w-full max-w-[26rem] flex-col">
           <h1
-            class="mt-8 text-center text-[1.75rem] leading-9 font-[500] text-gray-800"
+            class="xs:text-[2rem] xs:font-[600] xs:leading-10 text-center text-[1.75rem] leading-9 font-[500] text-gray-800 md:text-left lg:text-[2.5rem] lg:leading-11"
           >
-            A Simple Bookmark Manager
+            A Simple Bookmark <br />
+            Manager
           </h1>
           <p
-            class="mt-4 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400"
+            class="mt-4 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400 md:text-left lg:text-[0.95rem]"
           >
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
@@ -160,7 +164,7 @@
 
           <div
             id="get-button"
-            class="mt-6 flex flex-row items-center gap-3 text-[0.74rem]"
+            class="xs:text-[0.85rem] mt-6 flex flex-row items-center justify-center gap-3 text-[0.74rem] md:justify-start"
           >
             <a
               href="#chrome"
@@ -177,22 +181,24 @@
 
         <div
           id="about-img"
-          class="relative -order-1 w-full after:absolute after:-right-7 after:bottom-2 after:-z-1 after:h-[80%] after:w-full after:rounded-tl-full after:rounded-bl-full after:bg-indigo-500"
+          class="relative -order-1 after:absolute after:-right-7 after:bottom-2 after:-z-1 after:h-[80%] after:w-[90%] after:overflow-hidden after:rounded-tl-full after:rounded-bl-full after:bg-indigo-500 md:order-0 md:after:-right-16 lg:after:-right-24"
         >
           <img
             src="/images/illustration-hero.svg"
             alt="Bookmark Manager"
-            class="h-auto w-full"
+            class="h-auto w-full max-w-[40rem]"
           />
         </div>
       </section>
 
       <section id="features" class="mt-28 flex w-full flex-col">
-        <h2 class="text-center text-[1.5rem] font-[500] text-gray-800">
+        <h2
+          class="xs:text-[1.75rem] xs:font-[550] text-center text-[1.5rem] font-[500] text-gray-800 lg:text-[1.85rem]"
+        >
           Features
         </h2>
         <p
-          class="mt-2 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400"
+          class="mx-auto mt-2 max-w-[28rem] text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400 lg:text-[0.95rem]"
         >
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
@@ -201,46 +207,50 @@
 
         <div
           id="features-options"
-          class="flex w-full flex-col items-center pt-9 text-center text-[1.05rem] font-[450] text-gray-500"
+          class="xs:text-[1.1rem] mx-auto flex w-full max-w-[25rem] flex-col items-center pt-9 text-center text-[1.05rem] font-[450] text-gray-500 md:max-w-[45rem] md:flex-row"
         >
           <p
-            class="feature-option selected w-full border-t-1 border-b-1 border-t-gray-300 border-b-gray-300 p-[0.6rem] hover:text-red-400"
+            class="feature-option selected w-full cursor-pointer border-t-1 border-b-1 border-t-gray-300 border-b-gray-300 p-[0.6rem] hover:text-red-400 md:border-t-0"
           >
             Simple Bookmarking
           </p>
           <p
-            class="feature-option w-full justify-center border-b-1 border-b-gray-300 p-[0.6rem] hover:text-red-400"
+            class="feature-option w-full cursor-pointer justify-center border-b-1 border-b-gray-300 p-[0.6rem] hover:text-red-400"
           >
             Speedy Searching
           </p>
           <p
-            class="feature-option w-full border-b-1 border-b-gray-300 p-[0.6rem] hover:text-red-400"
+            class="feature-option w-full cursor-pointer border-b-1 border-b-gray-300 p-[0.6rem] hover:text-red-400"
           >
             Easy Sharing
           </p>
         </div>
 
-        <div id="feature-info" class="mt-12 flex w-full flex-col">
+        <div
+          id="feature-info"
+          class="mt-12 flex w-full flex-col items-center justify-center gap-16 md:flex-row lg:gap-26"
+        >
           <div
-            class="relative w-full after:absolute after:-bottom-8 after:-left-7 after:-z-1 after:h-[90%] after:w-full after:rounded-tr-full after:rounded-br-full after:bg-indigo-500"
+            class="relative after:absolute after:-bottom-6 after:-left-7 after:-z-1 after:h-[80%] after:w-[90%] after:rounded-tr-full after:rounded-br-full after:bg-indigo-500 md:after:-left-16 lg:after:-left-24"
           >
             <img
               id="feature-img"
               src="/images/features/features-tab-1.svg"
               alt="Simple Bookmarking w-full h-auto"
+              class="h-auto w-full max-w-[35rem]"
             />
           </div>
 
-          <div id="feature-text" class="mt-16">
+          <div id="feature-text" class="max-w-[26rem]">
             <h3
               id="feature-title"
-              class="text-center text-[1.3rem] font-[500] text-gray-800"
+              class="xs:text-[1.7rem] text-center text-[1.3rem] font-[500] text-gray-800 md:text-left lg:text-[1.8rem] lg:font-[530]"
             >
               Bookmark in one click
             </h3>
             <p
               id="feature-description"
-              class="mt-2 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400"
+              class="mt-2 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400 md:text-left lg:text-[0.95rem]"
             >
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
@@ -250,7 +260,7 @@
               <a
                 id="feature-link"
                 href="#"
-                class="rounded-[0.35rem] bg-indigo-500 px-4 py-3 font-[500] text-white hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
+                class="rounded-[0.35rem] bg-indigo-500 px-5 py-3 text-[0.8rem] font-[500] text-white hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
                 >More Info</a
               >
             </div>
@@ -259,20 +269,25 @@
       </section>
 
       <section id="download" class="mt-28 flex w-full flex-col">
-        <h2 class="text-center text-[1.38rem] font-[500] text-gray-800">
+        <h2
+          class="xs:text-[1.7rem] xs:font-[550] text-center text-[1.4rem] font-[500] text-gray-800 lg:text-[1.85rem]"
+        >
           Download the extension
         </h2>
         <p
-          class="mt-2 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400"
+          class="mx-auto mt-2 max-w-[28rem] text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400 lg:text-[0.95rem]"
         >
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
         </p>
 
-        <div id="browsers" class="mt-9 flex w-full flex-col items-center gap-8">
+        <div
+          id="browsers"
+          class="mt-9 flex flex-col items-center justify-center gap-8 md:h-max md:flex-row md:items-start"
+        >
           <div
             id="chrome"
-            class="flex flex-col items-center rounded-[1rem] bg-white px-4 py-6 shadow-lg"
+            class="flex max-w-[16rem] flex-col items-center rounded-[1rem] bg-white px-4 py-6 shadow-lg"
           >
             <img
               src="/images/logo-chrome.svg"
@@ -292,7 +307,7 @@
             />
             <button
               id="chrome-install"
-              class="install mt-5 w-full rounded-[0.35rem] bg-indigo-500 px-4 py-3 text-[0.9rem] font-[500] text-gray-100 hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
+              class="install mt-5 w-full cursor-pointer rounded-[0.35rem] bg-indigo-500 px-4 py-3 text-[0.85rem] font-[500] text-gray-100 hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
             >
               Add & Install Extension
             </button>
@@ -300,7 +315,7 @@
 
           <div
             id="firefox"
-            class="flex flex-col items-center rounded-[1rem] bg-white px-4 py-6 shadow-lg"
+            class="flex max-w-[16rem] flex-col items-center rounded-[1rem] bg-white px-4 py-6 align-middle shadow-lg md:mt-10"
           >
             <img
               src="/images/logo-firefox.svg"
@@ -320,7 +335,7 @@
             />
             <button
               id="firefox-install"
-              class="install mt-5 w-full rounded-[0.35rem] bg-indigo-500 px-4 py-3 text-[0.9rem] font-[500] text-gray-100 hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
+              class="install mt-5 w-full cursor-pointer rounded-[0.35rem] bg-indigo-500 px-4 py-3 text-[0.85rem] font-[500] text-gray-100 hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
             >
               Add & Install Extension
             </button>
@@ -328,7 +343,7 @@
 
           <div
             id="opera"
-            class="flex flex-col items-center rounded-[1rem] bg-white px-4 py-6 shadow-lg"
+            class="flex max-w-[16rem] flex-col items-center rounded-[1rem] bg-white px-4 py-6 shadow-lg md:mt-20"
           >
             <img
               src="/images/logo-opera.svg"
@@ -348,7 +363,7 @@
             />
             <button
               id="opera-install"
-              class="install mt-5 w-full rounded-[0.35rem] bg-indigo-500 px-4 py-3 text-[0.9rem] font-[500] text-gray-100 hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
+              class="install mt-5 w-full cursor-pointer rounded-[0.35rem] bg-indigo-500 px-4 py-3 text-[0.85rem] font-[500] text-gray-100 hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
             >
               Add & Install Extension
             </button>
@@ -356,14 +371,17 @@
         </div>
       </section>
 
-      <section id="faq" class="mt-28 flex w-full flex-col">
+      <section
+        id="faq"
+        class="mx-auto mt-28 flex w-full max-w-[27rem] flex-col"
+      >
         <h2
-          class="text-center text-[1.4rem] leading-7 font-[550] text-gray-800"
+          class="xs:text-[1.7rem] xs:font-[550] text-center text-[1.4rem] leading-7 font-[550] text-gray-800 lg:text-[1.8rem]"
         >
           Frequently Asked Questions
         </h2>
         <p
-          class="mt-3 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400"
+          class="mt-3 text-center text-[0.9rem] leading-[1.35rem] font-[420] text-gray-400 lg:text-[0.95rem]"
         >
           Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.
@@ -375,11 +393,11 @@
           >
             <div class="question-text flex flex-row justify-between">
               <p
-                class="ques w-full text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
+                class="ques xs:text-[0.98rem] w-full cursor-pointer text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
               >
                 What is Bookmark?
               </p>
-              <button class="dropdown-button">
+              <button class="dropdown-button cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -392,7 +410,7 @@
               </button>
             </div>
             <p
-              class="answer mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
+              class="answer xs:text-[0.94rem] mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[380] text-gray-500"
             >
               We offer a simple and powerful bookmarking feature that lets you
               save your favorite websites for easy access anytime.
@@ -402,11 +420,11 @@
           <article class="question border-b border-gray-200 p-[0.8rem]">
             <div class="question-text flex flex-row justify-between">
               <p
-                class="ques w-full text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
+                class="ques xs:text-[0.98rem] w-full cursor-pointer text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
               >
                 How can I request a new browser?
               </p>
-              <button class="dropdown-button">
+              <button class="dropdown-button cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -419,7 +437,7 @@
               </button>
             </div>
             <p
-              class="answer mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
+              class="answer xs:text-[0.94rem] mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[350] text-gray-500"
             >
               While we recommend using our service on the latest version of your
               preferred browser, if you need a new browser, you can download it
@@ -430,11 +448,11 @@
           <article class="question border-b border-gray-200 p-[0.8rem]">
             <div class="question-text flex flex-row justify-between">
               <p
-                class="ques w-full text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
+                class="ques xs:text-[0.98rem] w-full cursor-pointer text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
               >
                 Is there a mobile app?
               </p>
-              <button class="dropdown-button">
+              <button class="dropdown-button cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -447,7 +465,7 @@
               </button>
             </div>
             <p
-              class="answer mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
+              class="answer xs:text-[0.94rem] mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[350] text-gray-500"
             >
               Yes! We offer a mobile-friendly experience, and our app is
               available for both iOS and Android devices. Enjoy all the same
@@ -458,11 +476,11 @@
           <article class="question border-b border-gray-200 p-[0.8rem]">
             <div class="question-text flex flex-row justify-between">
               <p
-                class="ques w-full text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
+                class="ques xs:text-[0.98rem] w-full cursor-pointer text-[0.9rem] font-[480] text-gray-600 hover:text-red-400"
               >
                 What about other Chromium browsers?
               </p>
-              <button class="dropdown-button">
+              <button class="dropdown-button cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -475,7 +493,7 @@
               </button>
             </div>
             <p
-              class="answer mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[400] text-gray-500"
+              class="answer xs:text-[0.94rem] mt-4 hidden w-full text-[0.9rem] leading-[1.4rem] font-[350] text-gray-500"
             >
               We're currently optimized for Google Chrome and Opera. We're
               actively working on bringing full support to other Chromium-based
@@ -486,7 +504,7 @@
         <div class="mt-10 self-center">
           <a
             href="#"
-            class="rounded-[0.35rem] bg-indigo-500 px-4 py-3 font-[500] text-white hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
+            class="rounded-[0.35rem] bg-indigo-500 px-5 py-3 text-[0.8rem] font-[500] text-white hover:bg-gray-50 hover:text-indigo-500 hover:outline-2 hover:outline-indigo-500"
             >More Info</a
           >
         </div>
@@ -496,7 +514,7 @@
     <footer class="mt-28 flex w-full flex-col">
       <section
         id="contact"
-        class="flex w-full flex-col items-center bg-indigo-500 p-7"
+        class="flex w-full flex-col items-center bg-indigo-500 p-7 py-10 md:px-16 lg:px-24"
       >
         <p
           class="text-[0.68rem] font-[450] tracking-[0.25rem] text-gray-50 uppercase"
@@ -504,7 +522,7 @@
           45,000+ already joined
         </p>
         <h2
-          class="mt-3 text-center text-[1.28rem] leading-6 font-[500] text-gray-50"
+          class="xs:text-[1.7rem] xs:leading-8 mt-3 text-center text-[1.28rem] leading-6 font-[500] text-gray-50"
         >
           Stay up-to-date with what<br />
           we’re doing
@@ -514,7 +532,7 @@
           action="#"
           autocomplete="on"
           id="contact-form"
-          class="mt-7 flex w-full flex-col items-center gap-3"
+          class="mt-7 flex w-full flex-col items-center justify-center gap-3 md:flex-row"
         >
           <div id="email" class="relative">
             <input
@@ -537,7 +555,7 @@
           </div>
           <button
             type="submit"
-            class="w-[16.5rem] rounded-[0.4rem] bg-red-400 px-4 py-[0.65rem] text-[0.85rem] font-[500] text-gray-50 hover:bg-gray-50 hover:text-red-400 hover:outline-2 hover:outline-red-400"
+            class="w-[16.5rem] cursor-pointer rounded-[0.4rem] bg-red-400 px-4 py-[0.65rem] text-[0.85rem] font-[500] text-gray-50 hover:bg-gray-50 hover:text-red-400 hover:outline-2 hover:outline-red-400 md:w-[8rem]"
           >
             Contact Us
           </button>
@@ -546,16 +564,11 @@
 
       <section
         id="footer-nav"
-        class="flex w-full flex-col items-center bg-blue-950 p-7"
+        class="flex w-full flex-col items-center bg-blue-950 p-7 md:flex-row md:justify-between md:px-16 lg:px-24"
       >
-        <nav>
+        <nav class="flex-row items-center gap-12 md:flex">
           <a href="#" class="w-full">
-            <svg
-              width="148"
-              class="h-auto w-full"
-              height="25"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fill-rule="evenodd">
                 <path
                   d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
@@ -575,34 +588,34 @@
           </a>
 
           <ul
-            class="mt-8 flex w-full flex-col items-center gap-4 text-[1rem] font-[450] tracking-wider text-gray-400 uppercase"
+            class="mt-8 flex flex-col items-center gap-4 text-[0.8rem] font-[450] tracking-wider text-gray-400 uppercase md:mt-0 md:flex-row"
           >
             <li><a href="#features" class="hover:text-red-400">Features</a></li>
             <li><a href="#pricing" class="hover:text-red-400">Pricing</a></li>
             <li><a href="#contact" class="hover:text-red-400">Contact</a></li>
           </ul>
-
-          <ul
-            class="social-links mt-8 flex w-full flex-row justify-center gap-7"
-          >
-            <li>
-              <a href="https://www.facebook.com/">
-                <img
-                  src="/images/icons/icon-facebook.svg"
-                  alt="Facebook Logo"
-                  class="h-auto w-5 hover:opacity-70"
-              /></a>
-            </li>
-            <li>
-              <a href="https://x.com/home"
-                ><img
-                  src="/images/icons/icon-x.svg"
-                  alt="X Logo"
-                  class="h-auto w-5 hover:opacity-70"
-              /></a>
-            </li>
-          </ul>
         </nav>
+
+        <ul
+          class="social-links mt-8 flex flex-row justify-center gap-7 md:mt-0"
+        >
+          <li>
+            <a href="https://www.facebook.com/">
+              <img
+                src="/images/icons/icon-facebook.svg"
+                alt="Facebook Logo"
+                class="h-auto w-5 hover:opacity-70"
+            /></a>
+          </li>
+          <li>
+            <a href="https://x.com/home"
+              ><img
+                src="/images/icons/icon-x.svg"
+                alt="X Logo"
+                class="h-auto w-5 hover:opacity-70"
+            /></a>
+          </li>
+        </ul>
       </section>
     </footer>
   </body>
