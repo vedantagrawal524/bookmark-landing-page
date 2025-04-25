@@ -31,7 +31,7 @@
   }
 
   #mobile-menu.activate {
-    @apply flex!;
+    @apply translate-x-[0%]!;
   }
 
   /* Feature */

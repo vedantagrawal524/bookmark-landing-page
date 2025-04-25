@@ -27,10 +27,7 @@
     class="font-rubik flex h-max min-h-screen w-screen flex-col bg-gray-50 text-base"
   >
     <header class="mt-4 px-7 py-4 md:mt-8 md:px-16 md:py-6 lg:px-24">
-      <nav
-        id="header-nav"
-        class="relative flex flex-row items-center justify-between"
-      >
+      <nav id="header-nav" class="flex flex-row items-center justify-between">
         <a href="#" class="w-fit" id="logo">
           <svg
             width="148"
@@ -87,7 +84,7 @@
 
     <section
       id="mobile-menu"
-      class="absolute top-0 left-0 z-20 hidden h-screen w-full flex-col items-center justify-between bg-gray-900/90 px-7"
+      class="fixed top-0 left-0 z-20 flex h-screen w-full translate-x-[100%] flex-col items-center justify-between overflow-y-auto scroll-smooth bg-gray-900/90 px-7 transition-[translate] duration-400 ease-linear"
     >
       <ul
         class="mt-24 flex w-full flex-col items-center gap-0 text-[1.1rem] font-[400] tracking-widest text-gray-300 uppercase"
@@ -132,7 +129,7 @@
           /></a>
         </li>
         <li>
-          <a href="https://x.com/home"
+          <a href="https://x.com/"
             ><img
               src="/images/icons/icon-x.svg"
               alt="X Logo"
@@ -628,7 +625,7 @@
             /></a>
           </li>
           <li>
-            <a href="https://x.com/home"
+            <a href="https://x.com/"
               ><img
                 src="/images/icons/icon-x.svg"
                 alt="X Logo"
