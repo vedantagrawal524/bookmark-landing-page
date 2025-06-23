@@ -31,11 +31,11 @@ Users should be able to:
 
 #### 🖥️ Desktop
 
-![Desktop Screenshot](./design/desktop-active-states.jpg)
+![Desktop Screenshot](./client/design/desktop-active-states.jpg)
 
 #### 📱 Mobile
 
-![Mobile Screenshot](./design/mobile-active-states.jpg)
+![Mobile Screenshot](./client/design/mobile-active-states.jpg)
 
 ---
 
