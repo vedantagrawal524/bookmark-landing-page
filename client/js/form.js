@@ -1,7 +1,7 @@
 const form = document.getElementById("contact-form");
 const emailInput = document.getElementById("email-input");
 const errorMessages = document.querySelectorAll(".email-error");
-const API_BASE_URL = "https://bookmark-landing-page-bcrk.onrender.com";
+const API_BASE_URL = "https://bookmark-landing-page-1.onrender.com";
 
 const isValidEmail = (email) => {
   return /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(email);
