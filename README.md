@@ -10,6 +10,7 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
   - [Screenshots](#screenshots)
   - [Live Links](#live-links)
   - [Built With](#built-with)
+  - [Backend Features](#backend-features)
 - [Author](#author)
 
 ---
@@ -52,7 +53,20 @@ Users should be able to:
 - JavaScript  
 - Mobile-first workflow  
 - Flexbox  
-- [Vercel](https://vercel.com/) for deployment  
+- [Vercel](https://vercel.com/) for Client deployment  
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
+---
+
+### Backend Features
+
+- Created an **Express.js server** to handle email submissions.
+- Emails submitted via the contact form are stored securely in a **MongoDB database**.
+- Used **Mongoose** to define the email schema and perform validations.
+- Hosted backend using **Render**.
 
 ---
 
